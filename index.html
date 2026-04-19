@@ -3,19 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chavora | Date to Marry</title>
+    <title>Chavora | Success Meets Intent</title>
     <style>
-        body { font-family: sans-serif; background: #061109; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-        .logo { font-size: 3rem; font-weight: bold; margin-bottom: 10px; }
-        .tagline { color: #4ade80; margin-bottom: 30px; letter-spacing: 2px; }
-        .btn { background: white; color: black; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 10px; width: 200px; text-align: center; }
-        .btn:hover { background: #4ade80; }
+        :root {
+            --bg: #050805;
+            --accent: #4ade80;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body, html { 
+            height: 100%; 
+            margin: 0; 
+            font-family: "Charter", "Bitstream Charter", "Sitka Text", Cambria, serif; 
+            background-color: var(--bg); 
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Subtle background glow */
+        .glow {
+            position: absolute;
+            width: 40vw;
+            height: 40vw;
+            background: radial-gradient(circle, rgba(74, 222, 128, 0.05) 0%, rgba(5, 8, 5, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .container { 
+            position: relative;
+            z-index: 1;
+            padding: 60px 20px; 
+            max-width: 550px; 
+            text-align: center;
+        }
+
+        h1 { 
+            font-size: 3.2rem; 
+            font-weight: 400;
+            letter-spacing: 0.15rem; 
+            margin-bottom: 0;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        .tagline { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 0.4rem; 
+            color: var(--accent); 
+            margin-top: 10px;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        p { 
+            font-size: 1.15rem; 
+            color: var(--text-dim); 
+            line-height: 1.8; 
+            margin-bottom: 45px;
+            font-style: italic;
+        }
+
+        .cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn { 
+            font-family: -apple-system, sans-serif;
+            background: transparent;
+            color: var(--text-main); 
+            padding: 14px 40px; 
+            text-decoration: none; 
+            border-radius: 2px; 
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); 
+            cursor: pointer; 
+            border: 1px solid rgba(255,255,255,0.1);
+            width: 220px;
+            text-transform: uppercase;
+        }
+
+        .btn:hover { 
+            border-color: var(--accent);
+            background: rgba(74, 222, 128, 0.05);
+            letter-spacing: 0.15rem;
+        }
+
+        .footer { 
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+            font-family: -apple-system, sans-serif;
+            font-size: 0.65rem; 
+            color: #334155; 
+            text-transform: uppercase; 
+            letter-spacing: 0.2rem; 
+        }
+
+        /* Entrance Animation */
+        .fade-in {
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
-    <div class="logo">CHAVORA</div>
-    <div class="tagline">CAREER-FIRST MATRIMONY</div>
-    <a href="#" class="btn">Google Play Store</a>
-    <a href="#" class="btn">Apple App Store</a>
+    <div class="glow"></div>
+    
+    <div class="container fade-in">
+        <h1>Chavora</h1>
+        <div class="tagline">The Trajectory of Intent</div>
+        
+        <p>A private, vetted ecosystem for high-trajectory professionals. Designed for those who approach partnership with the same precision as their career.</p>
+        
+        <div class="cta-group">
+            <a href="https://onelink.to/your-id" class="btn">Play Store</a>
+            <a href="https://onelink.to/your-id" class="btn">App Store</a>
+        </div>
+    </div>
+
+    <div class="footer">Invite Only • Est. 2026</div>
 </body>
 </html>
